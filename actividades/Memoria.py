@@ -5,7 +5,6 @@ Exercises:
 1. Contar y desplegar el numero de taps LISTO
 2. Detectar cuando todos los cuadros se han destapado LISTO
 3. Central el dígito en el cuadro LISTO
-4. Como un condimento de innovación al juego, Podrías utilizar algo diferente a los dígitos para resolver el juego y que al usuario le ayude a tener mejor memoria ?
 """
 
 # Editado por 
@@ -19,6 +18,7 @@ from tkinter import CENTER, LEFT, RIGHT
 from turtle import *
 from freegames import path
 
+"Creamos 2 contadores, unos para la cantidar de taps y otro para los pares de las imagenes"
 contador = 0
 contadorImagen = 0
 
@@ -50,6 +50,7 @@ def xy(count):
 def tap(x, y):
     "Update mark and hidden tiles based on tap."
 
+    "Llamamos a ambos contadores creador al inicio"
     global contador
     global contadorImagen
 
@@ -68,6 +69,7 @@ def tap(x, y):
         state['mark'] = None
         contadorImagen += 1
 
+        "Aqui imprimimos en consola una vez ya no exiten pares disponibles por desbloquear"
         if contadorImagen == 32:
             print("Ya no quedan fotos")
     
@@ -90,6 +92,7 @@ def draw():
         up()
         goto(x + 27, y)
         color('black')
+        "Alineamos los numeros de los recuadros blancos al centro de estos"
         write(tiles[mark], font=('Arial', 30, 'normal'), align= CENTER)
 
     update()
