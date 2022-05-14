@@ -1,20 +1,13 @@
-"""Paint, for drawing shapes.
-
-Exercises
-
-1. Add a color.
-2. Complete circle.
-3. Complete rectangle.
-4. Complete triangle.
-5. Add width parameter.
-"""
-# Editado por Daniela Ruiz A01254229
+# Editado por 
+# Kevin Valdez - A01254336
+# Daniela Ruiz - A01254229
+# Ximena López - A01254325
+# Gustavo Betancourt - A01252532
 
 from turtle import *
 import turtle
 
 from freegames import vector
-
 
 def line(start, end):
     """Draw line from start to end."""
@@ -37,20 +30,19 @@ def square(start, end):
 
     end_fill()
 
-# Agregué la función para dibujar un círculo
+# Creamos la funcion para crear un circulo
 def circle(start, end):
     """Draw circle from start to end."""
 
     t = turtle
     r = 50
-    t.circle(r) 
+    t.circle(r)
 
-    pass  # TODO
 
-# Agregué la función para dibujar un rectángulo
+# Creamos la funcion para crear un rectangulo
 def rectangle(start, end):
     """Draw rectangle from start to end."""
-  
+
     t = turtle
  
     l = 100
@@ -68,27 +60,20 @@ def rectangle(start, end):
     t.forward(w) 
     t.left(90) 
 
-    pass  # TODO
-
-# Agregué la función para dibujar un triángulo
+# Creamos la funcion para crear un triangulo
 def triangle(start, end):
     """Draw triangle from start to end."""
 
-    t = turtle.Turtle()  
-    
-    t.forward(90)  
-       
-    t.left(120) 
+    t = turtle
 
-    t.forward(90)  
-
+    t.forward(100)
     t.left(120)
 
-    t.forward(90)  
+    t.forward(100)
+    t.left(120)
 
-      
-    pass  # TODO
-
+    t.forward(100)
+    t.left(120)
 
 def tap(x, y):
     """Store starting point or draw shape."""
@@ -101,7 +86,6 @@ def tap(x, y):
         end = vector(x, y)
         shape(start, end)
         state['start'] = None
-
 
 def store(key, value):
     """Store value in state at key."""
@@ -119,7 +103,7 @@ onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
 
-# Agregué un color
+# Agregue el color rosa
 onkey(lambda: color('pink'), 'P')
 
 onkey(lambda: store('shape', line), 'l')
@@ -127,4 +111,5 @@ onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', circle), 'c')
 onkey(lambda: store('shape', rectangle), 'r')
 onkey(lambda: store('shape', triangle), 't')
+
 done()
