@@ -55,5 +55,4 @@ A01254229
 		naves, las cuales explotan, una animación que también agregó mi equipo. El jugador pierde
 		cuando se le pasan 5 naves o cuando una nave lo toca.
 
-		Liga para el video de la explicación del proyecto: https://youtu.be/oc4SNCogvtY n
-		programación en Python 
+		Liga para el video de la explicación del proyecto: https://youtu.be/oc4SNCogvtY 
